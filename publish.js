@@ -584,7 +584,10 @@ exports.publish = function(taffyData, opts, tutorials) {
     Object.keys(helper.longnameToUrl).forEach(function(longname) {
         var myModules = helper.find(modules, {longname: longname});
         if (myModules.length) {
-            generate('Module: ' + myModules[0].name, myModules, helper.longnameToUrl[longname]);
+            var post = '-' + myModules[0].name.replace('s\\','-');
+            post = post.replace('root\\','');
+            post = post.replace('-fin-hypergrid','');
+            generate('fin-hypergrid' + post, myModules, helper.longnameToUrl[longname]);
         }
 
         var myClasses = helper.find(classes, {longname: longname});
