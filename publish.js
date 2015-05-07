@@ -585,7 +585,7 @@ exports.publish = function(taffyData, opts, tutorials) {
         var myModules = helper.find(modules, {longname: longname});
         if (myModules.length) {
             var post = '-' + myModules[0].name.replace('s\\','-');
-            post = post.replace('root\\','');
+            post = post.replace('.\\','');
             post = post.replace('-fin-hypergrid','');
             generate('fin-hypergrid' + post, myModules, helper.longnameToUrl[longname]);
         }
