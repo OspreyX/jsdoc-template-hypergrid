@@ -14,16 +14,25 @@
 </head>
 
 <body>
+<table style="width: 100%">
+    <tr>
+        <td style="vertical-align: top;">
+            <nav>
+                <?js= this.nav ?>
+            </nav>
+        </td>
+        <td style="vertical-align: top;">
+            <div id="main">
 
-<nav>
-    <?js= this.nav ?>
-</nav>
-<div id="main">
+                <h1 class="page-title"><?js= title ?></h1>
 
-    <h1 class="page-title"><?js= title ?></h1>
+                <?js= content ?>
+            </div>
+        </td>
+    </tr>
+</table>
 
-    <?js= content ?>
-</div>
+
 
 <br class="clear">
 
